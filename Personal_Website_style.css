@@ -1,0 +1,604 @@
+body{
+    font-family: 'Nunito', sans-serif;
+    background: #EFF1F7;
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    grid-area: content;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background: linear-gradient(to right,
+    rgb(102, 69, 69),
+    rgb(109, 84, 64),
+    rgb(148, 78, 78));
+    justify-content: center;
+}
+
+.footer{
+    grid-area: footer;
+    background: white;
+}
+
+.container{
+    font-size: 1.5em;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        "sidebar"
+        "content"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px auto 350px;
+}
+
+.content, 
+.sidebar, 
+.footer{
+    padding: 2em 2em;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+nav li{
+    list-style: none;
+    padding: 1em 0;
+    /* background-color: rgb(102, 69, 69); */
+    /* margin: 2px; */
+}
+
+.select{
+    color:black;
+    /* text-decoration: underline; */
+}
+
+nav li a{
+    font-size: 1.4em;
+    color: white;
+    font-weight: lighter;
+    text-decoration: none;
+    /* padding: 5px; */
+    /* background-color: red; */
+}
+
+nav li:hover{
+    color: black;
+    cursor: pointer;
+    /* text-decoration: underline; */
+}
+
+.main-content{
+    max-width: 960px;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.main-content img{
+    width: 17em;
+    height: 17em;
+    border-radius: 17em;
+    margin: 2em 0;
+}
+
+.main-content h1{
+    font-size: 3em;
+    font-weight: 300;
+    color: #373d46;
+    margin: 0;
+    padding-bottom: 12px;
+}
+
+.main-content h4{
+    font-size: 2em;
+    font-weight: 300;
+    color: #98a0ad;
+    margin: 0;
+}
+
+.main-content p{
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.8em;
+    color: #98a0ad;
+    margin: 0;
+    padding: 1em;
+}
+
+.main-content a{
+    color: #98a0ad;
+    font-size: 1.2em;
+}
+
+.main-content .download-color{
+    color: black;
+}
+
+.skill-content,
+.education-content,
+.project-content{
+    position: relative;
+    width: 100%;
+    padding: 1em;
+}
+
+.skill-content h3,
+.education-content h3,
+.project-content h3{
+    margin: 0;
+    padding-bottom: 1.5em;
+    font-size: 2em;
+}
+
+.skill-content h5{
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.bar{
+    position: relative;
+    width: 90%;
+}
+
+.progress{
+    width: 100%;
+    border-radius: 1em;
+    border: 2px solid grey;
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 2em;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.percent{
+    text-align: right;
+    border-right: 2px solid grey;
+    padding-right: 10px;
+    animation: animate .5s linear infinite;
+    background: linear-gradient(45deg, rgba(3, 27, 11, 0.25) 25%,
+        transparent 25%, transparent 50%, rgba(3, 27, 11, 0.25) 50%,
+        rgba(3, 27, 11, 0.25) 75%, transparent 75%, transparent);
+    background-size: 30px 30px;
+}
+
+@keyframes animate{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 30px 0;
+    }
+}
+
+.python{
+    width: 60%;
+}
+
+.web-development{
+    width: 70%;
+}
+
+.javascript{
+    width: 60%;
+}
+
+.java{
+    width: 50%;
+}
+
+.csharp{
+    width: 40%;
+}
+
+.matlab{
+    width: 60%;
+}
+
+.linux{
+    width: 40%;
+}
+
+.box{
+    width: 700px;
+    text-align: center;
+    background: white;
+    border-radius:20px;
+    display: block;
+    margin-bottom: 1em;
+}
+
+.logo{
+    padding-top: 1em;
+}
+
+.logo img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    position: relative;
+    top: 0;
+    transition: top 0.5s ease-out;
+    padding: 10px;
+}
+.logo img:hover{
+    top: -5px;
+}
+
+.logo p{
+    font-size: 1.2em;
+    padding: 1em 1em 0;
+    line-height: 1.4em;
+    margin: 0;
+}
+
+.color{
+    color: #98a0ad;
+}
+
+.slider-parent{
+    width: 700px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-child{
+    width: 2800px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-left: 0px;
+    position: relative;
+}
+
+.btn-left{
+    font-size: 50px;
+    position: absolute;
+    top: 400px;
+    left: 25px;
+    color: red;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.btn-right{
+    font-size: 50px;
+    position: absolute;
+    top: 400px;
+    left: 690px;
+    color: red;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.btn{
+    background-color: #EFF1F7;
+    transition: top 0.5s ease-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn:hover{
+    color: rgb(94, 9, 9);
+    background-color: black;
+}
+
+.dot{
+    cursor: pointer;
+    height: 1em;
+    width: 1em;
+    background-color: #bbb;
+    border-radius: 1em;
+    display: inline-block;
+    transition: all 0.2s ease-in;
+}
+
+.slide-dot{
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+.active, .dot:hover{
+    background-color: #717171;
+}
+
+.project-content img{
+    width: 93%;
+    height: 40vh;
+    background: white;
+    border-radius: 1em;
+    padding: 1em 0;
+    position: relative;
+    top: 0;
+    transition: top 0.5s ease-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.project-content img:hover{
+    top:-10px;
+}
+
+.project-content h4{
+    margin: 0;
+    padding-top: 2em;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.project-content p{
+    margin:0;
+    font-size: 1em;
+    padding-bottom: 1em;
+}
+
+.project-content .color{
+    margin: 0;
+    line-height: 1.8em;
+    font-size: 1.2em;
+    padding-bottom: 2em;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 2em auto;
+    text-align: center;
+}
+
+.footer{
+    background: linear-gradient(to right,
+    rgb(144, 140, 140), rgb(103, 89, 89), rgb(73, 49, 49));
+}
+
+.icons{
+    width: 25%;
+    padding-top: 5px; 
+}
+
+.icons img{
+    width:40%;
+}
+
+.icons p{
+    font-size: 1em;
+    color: #98a0ad;
+}
+
+.icons a{
+    text-decoration: none;
+}
+
+@media (min-width: 450px){
+    .container{
+        grid-template-rows: 120px auto 250px;
+    }
+    .sidebar{
+        padding: 1em 2em;
+    }
+    nav li a{
+        font-size: 1.2em;
+    }
+    .main-content img{
+        width: 10em;
+        height: 10em;
+        margin: 1em 0;
+    }
+    .main-content h1{
+        font-size: 1.5em;
+    }
+    .main-content h4{
+        font-size: 1em;
+    }
+    .main-content p{
+        font-size: .8em;
+    }
+    .main-content a{
+        font-size: 1em;
+    }
+    .skill-content h3,
+    .education-content h3,
+    .project-content h3{
+        font-size: 1.2em;
+    }
+    .skill-content h5{
+        font-size: .8em;
+    }  
+    .progress{
+        font-size: .5em;
+    }
+    .logo p{
+        font-size: .6em;
+    }
+    .btn-left{
+        top: 230px;
+        left: 40px;
+    }
+    .btn-right{
+        top: 230px;
+        left: 675px;
+    }
+    .dot{
+        height: .6em;
+        width: .6em;
+    }
+    .project-content img{
+        height: 25vh;
+        padding: 1em 0;
+    }
+    .project-content h4{
+        font-size: .8em;
+    }
+    .project-content p{
+        font-size: 0.6em;
+    }
+    .project-content .color{
+        line-height: 1.3em;
+        font-size: .7em;
+    }
+    .project{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .topic{
+        width: 30%;
+    }
+    footer ul{
+        padding:0;
+    }
+    .icons img{
+        width: 30%;
+    }
+    .icons p{
+        font-size: .6em;
+    }
+    footer{
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 850px){
+    .container{
+        grid-template-areas:
+            "sidebar content"
+            "sidebar footer";
+        grid-template-columns: 400px 1fr;
+        grid-template-rows: 1fr 200px;
+    }
+    .content{
+        width: 85%;
+    }
+    nav li a{
+        font-size: 1em;
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .sidebar{
+        background: linear-gradient(
+        rgb(102, 69, 69),
+        rgb(109, 84, 64),
+        rgb(148, 78, 78));
+        padding-top: 3em;
+        position: fixed;
+        width: 20%;
+        height: 150vh;
+    }
+    .main-content,
+    .skill-content,
+    .education-content,
+    .project-content{
+        text-align: left;
+        padding: 2em;
+        margin: 0;
+    }
+    .main-content img{
+        width: 220px;
+        height: 220px;
+        float: right;
+    }
+    .main-content h1{
+        font-size: 2em;
+    }
+    .main-content h4{
+        font-size: 1em;
+        padding-bottom: 1em;
+    }
+    .main-content p{
+        width: 60%;
+        padding: 0 0 1em;
+        font-size: 1em;
+    }
+    .main-content a{
+        font-size: 1em;
+    }
+    .skill-content{
+        width: 100%;
+        padding: 2em;
+    }
+    .skill-content h3,
+    .education-content h3,
+    .project-content h3{
+        font-size: 1.2em;
+    }
+    .skill-content h5{
+        font-size: .8em;
+        font-weight: 300;
+    }
+    .progress{
+        font-size: 0.4em;
+        margin-bottom: 1em;
+    }
+    .logo p{
+        font-size: 0.6em;
+    }  
+    .slider-parent{
+        margin: 0 auto;
+    }  
+    .slider-child{
+        text-align: center;
+    }
+    .btn-left{
+        font-size: 40px;
+        top: 270px;
+        left: 200px;
+        color: blue;
+    }
+    .btn-right{
+        font-size: 40px;
+        top: 270px;
+        left: 820px;
+        color: blue;
+    }
+    .dot{
+        height: .6em;
+        width: .6em;
+    }
+    .slide-dot{
+        padding: 0;
+    }
+    .project-content{
+        width: 100%;
+    }
+    .project-content img{
+        height: 25vh;
+        padding: 1em 0;
+    }
+    .project-content h4{
+        font-size: .8em;
+    }
+    .project-content p{
+        font-size: 0.6em;
+    }
+    .project-content .color{
+        line-height: 1.3em;
+        font-size: .7em;
+    }
+    .project{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .topic{
+        width: 30%;
+    }
+    footer ul{
+        padding:0;
+    }
+    .icons img{
+        width: 20%;
+    }
+    .icons p{
+        font-size: .6em;
+    } */
+}
