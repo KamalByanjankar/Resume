@@ -62,13 +62,13 @@ nav li{
     font-weight: bold;
 }
 
-nav li a{
+nav a{
     color: white;
     text-decoration: none;
 }
 
-nav li:hover{
-    color: black;
+nav a:hover{
+    /* color: black; */
     cursor: pointer;
     /* text-decoration: underline; */
 }
@@ -359,7 +359,7 @@ footer{
     background: linear-gradient(to right,
     rgb(102, 69, 69),
     rgb(109, 84, 64),
-    rgb(148, 78, 78));
+    rgb(148, 78, 78));   
 }
 
 .icons{
@@ -373,7 +373,7 @@ footer{
 
 .icons p{
     font-size: 1em;
-    color: #98a0ad;
+    color: white;
 }
 
 .icons a{
